@@ -164,6 +164,7 @@ def startSending():
     if(user_email_input.get() =="" or user_password_entry.get() =="" or user_subject_entry.get()==""):
         errorLabel.config(text="Lütfen boş bırakılan yerleri doldurunuz !")
         return
+    saveInstance()
 
     message = message_Text.get("1.0","end-1c")
     email = user_email_input.get()
