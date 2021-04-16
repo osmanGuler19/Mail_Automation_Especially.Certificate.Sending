@@ -1,1 +1,1 @@
-{'hostEmail': 'ornek@gmail.com', 'hostPassword': 'sifresifreNOTURKCEKARAKTER', 'hostSubject': 'Deneme', 'message': 'Deneme Maili'}
+{'hostEmail': 'example@gmail.com', 'hostPassword': 'examplePassword', 'hostSubject': 'Deneme', 'message': 'Deneme Maili'}

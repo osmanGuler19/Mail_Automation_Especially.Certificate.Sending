@@ -83,6 +83,7 @@ def mailler():
             listMails.append(temp)
     emails_path.place(x=160, y=180)
     emails_path.config(text = tf.name)
+    tf.close()
 
 
 
@@ -104,6 +105,7 @@ def isimler():
     listNames = [x.strip() for x in listNames]"""
     names_path.place(x=160,y=230)
     names_path.config(text= tf.name)
+    tf.close()
 
 
 choose_certificate_label = tk.Label(root,
@@ -189,7 +191,7 @@ def startSending():
         nameENG = nameENG.replace("Ç", "C")
         inviteLink = "linktr.ee/ieeege"
 
-        fileLocation = certificatePath +"/" + nameENG + ".jpeg"
+        fileLocation = certificatePath +"/" + nameENG + ".jpg"
         msg = MIMEMultipart()
         msg['From'] = email
         msg['To'] = sendTo
@@ -211,6 +213,7 @@ def startSending():
         server.sendmail(email, sendTo, text)
         textForLog = listMails[i]+" adresine mail gönderildi."
         appendLog(textForLog)
+        attachment.close()
 
 
 submit_button = tk.Button(root,
@@ -256,6 +259,8 @@ def loadInstance():
         set_text(user_password_entry,str(dictionary['hostPassword']))
         set_text(user_subject_entry,str(dictionary['hostSubject']))
         setTextInput(message_Text,str(dictionary['message']))
+
+    f.close()
 
 
 
