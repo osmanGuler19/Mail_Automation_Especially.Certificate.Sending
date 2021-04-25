@@ -14,8 +14,8 @@ global email
 global password
 global subject    # E-Postanın Konusu
 global server
-global listMails
-global listNames
+global listMails # Gönderilecek maillerin olduğu text dosyası
+global listNames # İsim dosyası. Aynı isimde adlandırdığımız sertifikaları göndermek için kullanacağız
 global certificatePath
 global message
 
@@ -264,11 +264,7 @@ def loadInstance():
     f.close()
 
 
-
-
 loadInstance()
-
-
 root.mainloop()
 
 
